@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Pricing Plans</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaeaea;
+        }
+
+        h1, h3 {
+            margin: 0;
+        }
+
+        /* Back Button Styling */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Parent container */
+        .container {
+            display: flex; /* Flexbox layout */
+            justify-content: space-between; /* Space between containers */
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container */
+        }
+
+        /* Child containers (cards) */
+        .box {
+            width: 30%; /* Each box takes 30% of the container's width */
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .price {
+            font-size: 36px;
+            color: #d37ad6;
+            margin: 20px 0;
+        }
+
+        .price span {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .box ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .box ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .box img {
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .box h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Styling the section title */
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        /* Section background */
+        .pricing-section {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        /* Button Styles */
+        .box a {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 20px;
+            background-color: #24a724;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .box a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-btn">← Back to Home</a>
+
+    <section id="pricing" class="pricing-section">
+        <!-- Pricing section heading -->
+        <h1 class="section-title">Choose the Perfect Plan for Your Business</h1>
+        
+        <!-- Container for the three pricing plans -->
+        <div class="container">
+            <div class="box">
+                <h1>Starter</h1>
+                <h3 class="price">$29<span>/month</span></h3>
+                <img src="Debit Card.png" alt="Debit-card" width="250px" height="200px">
+                <ul>
+                    <li><strong>5</strong> Transactions per month</li>
+                    <li><strong>Basic</strong> Customer Support</li>
+                    <li><strong>1</strong> Business Account</li>
+                    <li>Basic Analytics</li>
+                </ul>
+                <a href="Get Started.html">Get Started</a>
+            </div>
+
+            <div class="box">
+                <h1>Business</h1>
+                <h3 class="price">$99<span>/month</span></h3>
+                <img src="Cache Business.png" alt="Business-card" width="250px" height="200px">
+                <ul>
+                    <li><strong>Unlimited</strong> Transactions</li>
+                    <li><strong>Priority</strong> Customer Support</li>
+                    <li><strong>5</strong> Business Accounts</li>
+                    <li>Advanced Analytics</li>
+                </ul>
+                <a href="#">Upgrade Now</a>
+            </div>
+
+            <div class="box">
+                <h1>Enterprise</h1>
+                <h3 class="price">Custom Pricing</h3>
+                <img src="Cache Enterprise.png" alt="Enterprise-card" width="250px" height="200px">
+                <ul>
+                    <li><strong>Unlimited</strong> Transactions</li>
+                    <li><strong>24/7</strong> Premium Support</li>
+                    <li><strong>Unlimited</strong> Business Accounts</li>
+                    <li>Custom Integrations & Reports</li>
+                </ul>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

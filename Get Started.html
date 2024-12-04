@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache Bank - Get Started Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="max-w-md mx-auto mt-12 bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Get Started with Cache Bank</h2>
+
+        <!-- Form for getting started -->
+        <form id="signupForm" class="space-y-4">
+            <!-- Full Name -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name"
+                    class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                <div id="nameError" class="text-red-500 text-sm mt-1"></div>
+            </div>
+
+            <!-- Email Address -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email"
+                    class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                <div id="emailError" class="text-red-500 text-sm mt-1"></div>
+            </div>
+
+            <!-- Password -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter a strong password"
+                    class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                <div id="passwordError" class="text-red-500 text-sm mt-1"></div>
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                    class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                <div id="phoneError" class="text-red-500 text-sm mt-1"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                class="w-full bg-blue-500 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 transition">
+                Get Started
+            </button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for form validation
+        document.getElementById("signupForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Error flag
+            let formIsValid = true;
+
+            // Clear all previous errors
+            document.querySelectorAll('.text-red-500').forEach(function (error) {
+                error.textContent = '';
+            });
+
+            // Full Name Validation
+            const name = document.getElementById("name").value;
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Full name is required.";
+                formIsValid = false;
+            }
+
+            // Email Validation
+            const email = document.getElementById("email").value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
+            if (email === "false") {
+                document.getElementById("emailError").textContent = "Email is required.";
+                formIsValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").textContent = "Enter a valid email address.";
+                formIsValid = false;
+            }
+
+            // Password Validation
+            const password = document.getElementById("password").value;
+            if (password === "") {
+                document.getElementById("passwordError").textContent = "Password is required.";
+                formIsValid = false;
+            } else if (password.length < 6) {
+                document.getElementById("passwordError").textContent = "Password must be at least 6 characters.";
+                formIsValid = false;
+            }
+
+            // Phone Validation
+            const phone = document.getElementById("phone").value;
+            const phonePattern = /^\d{10}$/; // Simple 10 digit phone validation
+            if (phone === "") {
+                document.getElementById("phoneError").textContent = "Phone number is required.";
+                formIsValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").textContent = "Enter a valid 10-digit phone number.";
+                formIsValid = false;
+            }
+
+            // If the form is valid, submit the form
+            if (formIsValid) {
+                alert("Form submitted successfully!");
+                document.getElementById("signupForm").reset(); // Clear the form
+            }
+        });
+    </script>
+</body>
+
+</html>
