@@ -26,38 +26,35 @@
 </head>
 <body class="bg-gray-50 font-plus-jakarta w-full">
 
-<!-- Navigation Section -->
+<!-- Component 1 -->
 <header class="w-full bg-white shadow-md py-4">
-    <div class="container mx-auto flex justify-between items-center px-4">
+    <header class="container mx-auto flex justify-between items-center px-4">
         <!-- SVG Menu Icon -->
         <button id="menu-toggle" class="block md:hidden">
             <svg viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6" fill="none">
-                <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </button>
 
-        <!-- Company Logo -->
-        <img src="./assets/component-1/navigation/cache-bank-logo.png" alt="Company logo" class="logo">
-        
-        <!-- Navigation Links -->
-        <nav id="menu" class="hidden md:flex space-x-6 text-gray-700">
-            <ul class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
-                <li><a href="product.html" class="hover:text-purple-500">Product</a></li>
-                <li><a href="features.html" class="hover:text-purple-500">Features</a></li>
-                <li><a href="Get Started.html" class="hover:text-purple-500">Get Started</a></li>
-                <li><a href="contact.html" class="hover:text-purple-500">Contact</a></li>
-            </ul>
-        </nav>
+       <!-- Company Logo -->
+       <img src="./assets/component-1/navigation/cache-bank-logo.png" alt="Company logo" class="logo">
 
-        <!-- Login and Sign-Up Buttons -->
-        <div class="hidden md:flex space-x-4">
-            <a href="login.html" class="text-gray-700 py-2 hover:text-purple-500">Log in</a>
-            <a href="Get Started.html" class="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-green-500 transition-colors duration-200">Sign Up</a>
-        </div>
-    </div>
+<!-- Navigation Links -->
+<nav id="menu" class="hidden md:flex space-x-4 text-gray-700">
+    <ul class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
+        <li><a href="product.html" class="hover:text-purple-500">Product</a></li>
+        <li><a href="features.html" class="hover:text-purple-500">Features</a></li>
+        <li><a href="Get Started.html" class="hover:text-purple-500">Get Started</a></li>
+        <li><a href="contact.html" class="hover:text-purple-500">Contact</a></li>
+        <li><a href="login.html" class="text-gray-700 py-2 hover:text-purple-500">Log in</a></li>
+        <li><a href="Get Started.html" class="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-green-500 transition-colors duration-200">Sign Up</a></li>
+    </ul>
+</nav>
 </header>
 
-<!-- Hero Section --> 
+<!--End of Component 1-->
+
+<!--Component 2-->
 <section class="container mx-auto flex flex-col md:flex-row items-center text-center md:text-left py-12 px-4 space-y-8 md:space-y-0 md:space-x-8">
     <div class="md:w-1/2">
         <h1 class="text-4xl font-extrabold text-blue-950">Clever place to keep your Cache.</h1>
@@ -90,8 +87,9 @@
         <img src="assets/component-2/logos/notion-logo.svg" alt="Notion logo" class="w-20 h-auto mx-auto">
     </div>
 </section>
+<!--End of Component 2-->
 
-<!-- Main Description Section -->
+<!-- Component 3 -->
 <section class="container mx-auto text-center py-12 px-4">
     <h1 class="text-4xl font-extrabold text-blue-950">Elevate your Banking with Cache</h1>
     <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -187,7 +185,9 @@
             </div>
         </div>
     </section>
+<!--End of Component 3-->
 
+<!--Component 4-->
     <section class="container mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left py-12 px-4 space-y-8 md:space-y-0 md:space-x-8">
         <div class="md:w-1/4">
             <h1 class="text-4xl font-extrabold text-blue-950 text-center">250+</h1>
@@ -212,60 +212,63 @@
         <div class="md:w-1/2 flex justify-center md:justify-start">
             <img src="./assets/component-4/getting-started.png" alt="Getting Started" class="w-full md:w-3/4 h-auto">
         </div>
+        <!-- Text and Icon Content -->
         <div class="md:w-1/2 space-y-4 p-4 flex flex-col items-center md:items-start justify-center">
-            <h1 class="text-4xl font-extrabold text-blue-950">How Cache Works.</h1>
+            <h1 class="text-4xl font-extrabold text-blue-950">How Cache Works?</h1>
             <p class="text-lg text-gray-600 mt-4">
                 Discover how Cache provides seamless access to your accounts, with time-saving features designed for ease and efficiency.
             </p>
-             <!-- Icons and Text Content -->
-             <div class="md:w-1/4 gap-x-96">
+            <!-- Icons and Text -->
+            <div class="grid grid-cols-2 gap-6 w-full">
                 <!-- Icon 1 -->
                 <div class="flex flex-col items-center text-center">
-                  <div class="bg-green-500 rounded-full p-3 flex items-center justify-center w-16 h-16 mb-4">
-                    1
-                  </div>
-                  <h2 class="text-gray-800 text-lg font-bold">Visit Cache Bank Website</h2>
-                  <p class="text-gray-600 text-sm">
-                    Explore our services and find out how we can help you manage your finances effectively.
-                  </p>
+                    <div class="bg-green-500 rounded-full p-3 flex items-center justify-center w-16 h-16 mb-4">
+                        1
+                    </div>
+                    <h2 class="text-gray-800 text-lg font-bold">Visit Cache Bank Website</h2>
+                    <p class="text-gray-600 text-sm">
+                        Go to Cache Bank click "Sign up" or "Open and account".
+                    </p>
                 </div>
-              
+    
                 <!-- Icon 2 -->
                 <div class="flex flex-col items-center text-center">
-                  <div class="bg-pink-300 rounded-full p-3 flex items-center justify-center w-16 h-16 mb-4">
-                    2
-                  </div>
-                  <h2 class="text-gray-800 text-lg font-bold">Text for Icon 2</h2>
-                  <p class="text-gray-600 text-sm">
-                    Brief description or information related to the second icon.
-                  </p>
+                    <div class="bg-pink-300 rounded-full p-3 flex items-center justify-center w-16 h-16 mb-4">
+                        2
+                    </div>
+                    <h2 class="text-gray-800 text-lg font-bold">Choose Account Type</h2>
+                    <p class="text-gray-600 text-sm">
+                       Select from checking,savings or developer specific accounts.
+                    </p>
                 </div>
-              
+    
                 <!-- Icon 3 -->
                 <div class="flex flex-col items-center text-center">
-                  <div class="bg-pink-300 rounded-full p-3 flex items-center justify-center w-16 h-16 mb-4">
-                    3
-                  </div>
-                  <h2 class="text-gray-800 text-lg font-bold">Text for Icon 3</h2>
-                  <p class="text-gray-600 text-sm">
-                    Brief description or information related to the third icon.
-                  </p>
+                    <div class="bg-pink-300 rounded-full p-3 flex items-center justify-center w-16 h-16 mb-4">
+                        3
+                    </div>
+                    <h2 class="text-gray-800 text-lg font-bold">Provide Personal information</h2>
+                    <p class="text-gray-600 text-sm">
+                        Complete the form with your details and identification for security.
+                    </p>
                 </div>
-              
+    
                 <!-- Icon 4 -->
                 <div class="flex flex-col items-center text-center">
-                  <div class="bg-green-500 rounded-full p-3 flex items-center justify-center w-16 h-16 mb-4">
-                    4
-                  </div>
-                  <h2 class="text-gray-800 text-lg font-bold">Text for Icon 4</h2>
-                  <p class="text-gray-600 text-sm">
-                    Brief description or information related to the fourth icon.
-                  </p>
+                    <div class="bg-green-500 rounded-full p-3 flex items-center justify-center w-16 h-16 mb-4">
+                        4
+                    </div>
+                    <h2 class="text-gray-800 text-lg font-bold">Verify and submit</h2>
+                    <p class="text-gray-600 text-sm">
+                        Check your information,agree to terms,and submit for account approval.
+                    </p>
                 </div>
-              </div>
+            </div>
+        </div>
     </section>
+    <!--End of Component 4-->
     
-    <!--Contact Section-->
+    <!--Component 5-->
     <section class="space-gap-8">
         <div class="container mx-auto">
             <div class="grid md:grid-cols-3 gap-8">
@@ -308,8 +311,7 @@
                      <h3 class="text-xl font-semibold text-gray-700">Location</h3>
                      <p class="text-gray-600 mt-2">Find us at our office</p>
                      <a href="#" class=" text-green-500 px-4 py-2 rounded-md mt-4 font-bold">15 Tech Alley,Cape Town</a>
-     
-    </section>
+      </section>
     
 <!-- Footer Section -->
 <footer class="w-full bg-green-500 py-6 mt-20 text-white">
@@ -324,16 +326,21 @@
         <p>© 2024 Cache Bank. All rights reserved.</p>
     </div>
 </footer>
+<!--End of Component 5-->
 
 <!-- JavaScript -->
-<script>
-    // Toggle the mobile menu
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
+ <script>
+// Toggle mobile menu and hide the logo
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    const Menu = document.getElementById('menu');
+    const logoToHide = document.getElementById('logo-to-hide');
+    
+    // Toggle the menu visibility
+    Menu.classList.toggle('hidden');
+    
+    // Toggle the logo visibility
+    logoToHide.classList.toggle('hidden');
+});
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="./assets/js/loopple/loopple.js"></script>
