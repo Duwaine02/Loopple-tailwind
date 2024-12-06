@@ -41,22 +41,7 @@ Alternatively, provide a brief description of the highlights from your presentat
    ```
 3. Open the `index.html` file in your browser to view the website.
 
----
-
-## Folder Structure
-```plaintext
-cache-bank-website/
-|-- assets/
-|   |-- css/
-|   |   |-- styles.css
-|   |-- js/
-|   |   |-- scripts.js
-|   |-- images/
-|-- index.html
-|-- README.md
-```
-
----
+-
 
 ## Technologies Used
 - **HTML5**: For structure and content.
