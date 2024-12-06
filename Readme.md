@@ -76,6 +76,6 @@ cache-bank-website/
 For any questions or feedback, please contact:
 
 **Your Name**
-- **Email**: your-email@example.com
-- **GitHub**: [your-github-profile](https://github.com/your-profile)
+- **Email**: duwainewaine02@gmail.com
+- **GitHub**:(https://github.com/Duwaine02)
 
