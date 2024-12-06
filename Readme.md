@@ -33,7 +33,7 @@ Alternatively, provide a brief description of the highlights from your presentat
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/cache-bank-website.git
+   git clone https://github.com/Duwaine02/Module_11_CS20240247_PTO2047_Group-B_SDF06_Duwaine-Julies_Coach-Owen.git
    ```
 2. Navigate to the project directory:
    ```bash
