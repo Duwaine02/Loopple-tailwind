@@ -21,6 +21,17 @@
             max-width: 100%;
             height: auto;
         }
+        #mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0; /* Hidden by default */
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 300px; /* Adjust based on menu content */
+}
+
+
     </style>
 
 </head>
@@ -28,30 +39,46 @@
 
 <!-- Component 1 -->
 <header class="w-full bg-white shadow-md py-4">
-    <header class="container mx-auto flex justify-between items-center px-4">
-        <!-- SVG Menu Icon -->
+    <div class="container mx-auto flex justify-between items-center px-4">
+        <!-- SVG Menu Icon (Mobile Only) -->
         <button id="menu-toggle" class="block md:hidden">
             <svg viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6" fill="none">
                 <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </button>
 
-       <!-- Company Logo -->
-       <img src="./assets/component-1/navigation/cache-bank-logo.png" alt="Company logo" class="logo">
+        <!-- Company Logo -->
+        <img src="./assets/component-1/navigation/cache-bank-logo.png" alt="Company logo" class="logo">
 
-<!-- Navigation Links -->
-<nav id="menu" class="hidden md:flex space-x-4 text-gray-700">
-    <ul class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
-        <li><a href="product.html" class="hover:text-purple-500">Product</a></li>
-        <li><a href="features.html" class="hover:text-purple-500">Features</a></li>
-        <li><a href="Get Started.html" class="hover:text-purple-500">Get Started</a></li>
-        <li><a href="contact.html" class="hover:text-purple-500">Contact</a></li>
-        <li><a href="login.html" class="text-gray-700 py-2 hover:text-purple-500">Log in</a></li>
-        <li><a href="Get Started.html" class="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-green-500 transition-colors duration-200">Sign Up</a></li>
-    </ul>
-</nav>
+        <!-- Navigation Links (Desktop) -->
+        <nav id="menu" class="hidden md:flex space-x-6 text-gray-700">
+            <ul class="flex flex-row space-x-6">
+                <li><a href="product.html" class="hover:text-purple-500">Product</a></li>
+                <li><a href="features.html" class="hover:text-purple-500">Features</a></li>
+                <li><a href="Get Started.html" class="hover:text-purple-500">Get Started</a></li>
+                <li><a href="contact.html" class="hover:text-purple-500">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Login and Sign-Up Buttons (Desktop Only) -->
+        <div class="hidden md:flex space-x-4">
+            <a href="login.html" class="text-gray-700 py-2 hover:text-purple-500">Log in</a>
+            <a href="Get Started.html" class="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-green-500 transition-colors duration-200">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobile-menu" class="flex-col bg-white shadow-md p-4 space-y-4 md:hidden w-full">
+        <ul class="flex flex-col space-y-4">
+            <li><a href="product.html" class="text-gray-700 hover:text-purple-500">Product</a></li>
+            <li><a href="features.html" class="text-gray-700 hover:text-purple-500">Features</a></li>
+            <li><a href="Get Started.html" class="text-gray-700 hover:text-purple-500">Get Started</a></li>
+            <li><a href="contact.html" class="text-gray-700 hover:text-purple-500">Contact</a></li>
+            <li><a href="login.html" class="text-gray-700 hover:text-purple-500">Log in</a></li>
+            <li><a href="Get Started.html" class="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-green-500 transition-colors duration-200">Sign Up</a></li>
+        </ul>
+    </nav>
 </header>
-
 <!--End of Component 1-->
 
 <!--Component 2-->
@@ -330,16 +357,13 @@
 
 <!-- JavaScript -->
  <script>
-// Toggle mobile menu and hide the logo
-document.getElementById('menu-toggle').addEventListener('click', () => {
-    const Menu = document.getElementById('menu');
-    const logoToHide = document.getElementById('logo-to-hide');
-    
-    // Toggle the menu visibility
-    Menu.classList.toggle('hidden');
-    
-    // Toggle the logo visibility
-    logoToHide.classList.toggle('hidden');
+// Select the menu toggle button and mobile menu
+const menuToggleButton = document.getElementById("menu-toggle");
+const Menu = document.getElementById("");
+
+// Add click event listener to toggle mobile menu visibility
+menuToggleButton.addEventListener("click", () => {
+    Menu.classList.toggle("hidden");
 });
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
